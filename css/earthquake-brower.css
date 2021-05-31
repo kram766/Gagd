@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  background-color: rgba(95, 158, 160, 0.2);
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1px 10px 0px 20px;
+  border-bottom: 0.25px solid darkgrey;
+}
+.headericon > img {
+  width: 50px;
+}
+.heading-title {
+  font-size: 35px;
+  font-weight: 600;
+}
+.toggle-button {
+  font-size: 30px;
+}
+.map_data_container {
+  display: flex;
+  height: 89vh;
+  width: 100%;
+  background-color: rgba(95, 158, 160, 0.1);
+}
+.map {
+  width: 100%;
+}
+.map_query {
+  display: inline-block;
+  width: 25%;
+  color: white;
+  background-color: cadetblue;
+}
+.map_query_container {
+  padding: 5px 5px;
+}
+.search_query {
+  padding: 5px 5px;
+}
+.queryOn_no {
+  padding: 5px 5px;
+  border: 0.5px solid white;
+  margin-bottom: 10px;
+}
+#apply_search {
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: sans-serif;
+  padding: 5px 30px;
+  font-size: 15px;
+  border-radius: 3px;
+  outline: navajowhite;
+  border: 1px solid lightblue;
+}
+#apply_search:hover {
+  background-color: cadetblue;
+  color: white;
+}
+.search_query p {
+  margin-bottom: 4px;
+}
+select {
+  padding: 3px 5px;
+  width: 100px;
+  outline: none;
+}
+.magnitude-field input[type="text"],
+.depthRange input[type="text"] {
+  width: 30px;
+  outline: none;
+}
+.popover-body {
+  padding: 0.5rem 0.75rem;
+  color: #212529;
+  width: 420px;
+}
+/* .bs-popover-auto[x-placement^="top"], */
+.bs-popover-top {
+  width: 532px;
+  margin-bottom: 0.5rem;
+}
+.popover {
+  max-width: 518px !important;
+}
+.popover-body {
+  width: 100% !important;
+}
+th,
+td {
+  padding: 0px 10px;
+}
+table {
+  display: inline-block;
+  width: 100%;
+  margin-right: 0px;
+}
+tbody {
+  width: 100%;
+  display: inline-block;
+}
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+td:nth-child(3) {
+  width: 100px;
+}
+#preloader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-72%, -50%);
+}

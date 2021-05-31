@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Data</title>
+    <link rel="stylesheet" href="./css/earthquake-brower.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+    
+</head>
+<body>
+    <div class="heading">
+        <div class="headericon">
+            <img src="./images/LOGO.png" />
+        </div>
+        <div class="heading-title">
+            <p>Earthquake data</p>
+        </div>
+        <div class="toggle-button">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="map_data_container">
+        <div id="map" class="map">
+            <!-- <div id="popup"></div> -->
+        </div>
+        <div id="preloader">
+            <img src="/images/giphy.gif">
+        </div>
+        <div class="map_query">
+            <div class="map_query_container">
+                <div class="search_query">
+                    <div class="queryOn_no">
+                        <p>No of Earthquake :</p>
+                        <select class="select_option">
+                            <option value=100>100</option>
+                            <option value=200>200</option>
+                            <option value=300>300</option>
+                            <option value=400>400</option>
+                            <option value=500>500</option>
+                            <option value=600>600</option>
+                            <option value=700>700</option>
+                            <option value=800>800</option>
+                            <option value=900>900</option>
+                            <option value=1000>1000</option>
+                            <option value=2000>2000</option>
+                            <option value=3000>3000</option>
+                            <option value=4000>4000</option>
+                            <option value=5000>5000</option>
+                            <option value=10000>10000</option>
+                            <option value=15000>15000</option>
+                            <option value=19000>19000</option>
+                        </select>
+                    </div>
+                    <div class="queryOn_no neworLarg">
+                        <p>Select earthquakes by: </p>
+                        <select>
+                            <option>Newest</option>
+                            <option>Largest</option>
+                        </select>
+                    </div>
+                    <div class="queryOn_no magRange">
+                        <p>Magnitude Range : </p>
+                       <input type="checkbox" id="all" />
+                       <label for="all">All</label>
+                       <div class="magnitude-field">
+                           <input type="text" class="min_magnitude" />
+                           <label>>=Magnitude<=</label>
+                           <input type="text" class="max_magnitude" />                          
+                       </div>
+                    </div> 
+                    <div class="queryOn_no depthRange">
+                        <p>Depth Range : </p>
+                        <div class="depthRange">
+                            <input type="text" class="min_depth" />
+                            <label>>=Depth<=</label>
+                            <input type="text" class="max_mdepth" />                          
+                        </div>
+                    </div>                
+                    <button id="apply_search">Apply</button>
+                    <div id="info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup"></div>
+    <script src="./js/earthquake_data.js"></script>
+</body>
+</html>
